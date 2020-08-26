@@ -5,6 +5,83 @@ Utilizamos la entidad **Persona** para realizar operaciones **CRUD** (Create, Re
 
 ## API REST
 
+- ### GET --> [http://localhost:8080/persona](http://localhost:8080/persona)
+Devuelve todas las personas de la base de datos.\
+*SELECT * FROM demo.persona;*
+
+>###### Response
+>```sh
+>200-OK
+>```
+>```sh
+>{
+>    {
+>        "dni": "40000001",
+>        "nombre": "Lionel",
+>        "apellido": "Messi"
+>    },
+>    {
+>        "dni": "40000002",
+>        "nombre": "Cristiano",
+>        "apellido": "Ronaldo"
+>    }
+>}
+>```
+
+- ### GET --> [http://localhost:8080/persona/40000001](http://localhost:8080/persona/40000001)
+Devuelve la persona con **dni**=*40000001*.\
+*SELECT * FROM demo.persona WHERE dni=40000001;*
+
+>###### Response
+>```sh
+>200-OK
+>```
+>```sh
+>{
+>    "dni": "40000001",
+>    "nombre": "Lionel",
+>    "apellido": "Messi"
+>}
+>```
+
+- ### POST --> [http://localhost:8080/persona](http://localhost:8080/persona)
+
+>###### Request
+>```sh
+>{
+>   "nombre": "Ronaldinho",
+>   "apellido": "Gaucho"
+>}
+>```
+
+>###### Response
+>```sh
+>200-Ok
+>```
+
+
+- ### PUT --> [http://localhost:8080/persona/40000001](http://localhost:8080/persona/40000001)
+
+>###### Request
+>```sh
+>{
+>   "nombre": "Lionel Andres",
+>   "apellido": "Messi"
+>}
+>```
+
+>###### Response
+>```sh
+>200-Ok
+>```
+
+- ### DELETE --> [http://localhost:8080/persona/40000001](http://localhost:8080/persona/40000001)
+
+>###### Response
+>```sh
+>200-Ok
+>```
+
 ## Tecnología
 
 - [Java 8](https://www.oracle.com/java/technologies/javase-jdk8-downloads.html)
