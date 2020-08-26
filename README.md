@@ -6,7 +6,7 @@ Utilizamos la entidad **Persona** para realizar operaciones **CRUD** (Create, Re
 ## API REST
 
 - ### GET --> [http://localhost:8080/persona](http://localhost:8080/persona)
-Devuelve todas las personas de la base de datos.\
+Devuelve **todas** las personas de la base de datos.\
 *SELECT * FROM demo.persona;*
 
 >###### Response
