@@ -45,6 +45,8 @@ Devuelve la persona con **dni**=*40000001*.\
 >```
 
 - ### POST --> [http://localhost:8080/persona](http://localhost:8080/persona)
+Crea una persona con un **dni** auto-incrementado.\
+*INSERT INTO demo.persona (nombre, apellido) VALUES ('Ronaldinho', 'Gaucho');*
 
 >###### Request
 >```sh
@@ -61,12 +63,14 @@ Devuelve la persona con **dni**=*40000001*.\
 
 
 - ### PUT --> [http://localhost:8080/persona/40000001](http://localhost:8080/persona/40000001)
+Modifica la persona con **dni**=*40000001*.\
+*UPDATE demo.persona SET nombre='Lionel Andres', apellido='Messi Cuccittini' WHERE dni=40000001;*
 
 >###### Request
 >```sh
 >{
 >   "nombre": "Lionel Andres",
->   "apellido": "Messi"
+>   "apellido": "Messi Cuccittini"
 >}
 >```
 
@@ -76,6 +80,8 @@ Devuelve la persona con **dni**=*40000001*.\
 >```
 
 - ### DELETE --> [http://localhost:8080/persona/40000001](http://localhost:8080/persona/40000001)
+Elimina la persona con **dni**=*40000001*.\
+*DELETE FROM demo.persona WHERE dni=40000001;*
 
 >###### Response
 >```sh
