@@ -1,0 +1,14 @@
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PersonaApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(PersonaApplication.class, args);
+		System.out.println("Escuchando en el puerto 8080...");
+	}
+
+}
